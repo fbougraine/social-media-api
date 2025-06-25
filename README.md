@@ -21,7 +21,7 @@ This project allows users to create posts, like, share, retweet, comment, and re
 - Python 3.x
 - Django 4.x
 - Django REST Framework
-- SQLite (default DB, replaceable with PostgreSQL)
+- SQLite (default DB)
 
 ---
 ## 🧪 API Endpoints
