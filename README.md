@@ -27,7 +27,6 @@ This project allows users to create posts, like, share, retweet, comment, and re
 
 ## ⚙️ Setup Instructions
 
-### 1. Clone the Repository
 
 ```bash
 git clone git@github.com:your-username/social-media-api.git
@@ -39,3 +38,14 @@ python manage.py makemigrations
 ppython manage.py runserver
 python manage.py migrate
 
+🧪 API Endpoints
+| Action             | Method | Endpoint           | Body Parameters                                               |
+| ------------------ | ------ | ------------------ | ------------------------------------------------------------- |
+| Register User      | POST   | `/api/users/`      | `username`, `password`                                        |
+| Create Post        | POST   | `/api/posts/`      | `user`, `text`, `original_post?`                              |
+| Like a Post        | POST   | `/api/likes/`      | `user`, `post`                                                |
+| Share a Post       | POST   | `/api/shares/`     | `user`, `post`                                                |
+| Retweet a Post     | POST   | `/api/retweets/`   | `user`, `text`, `original_post`                               |
+| Comment on Post    | POST   | `/api/comments/`   | `user`, `post`, `text`, `parent?`                             |
+| Grade a Post (1-5) | POST   | `/api/grades/`     | `user`, `post`, `score (1-5)`                                 |
+| Get Post Details   | GET    | `/api/posts/<id>/` | Returns likes, shares, retweets, comments, replies, avg grade |
