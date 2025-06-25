@@ -46,6 +46,6 @@ python3 -m venv env
 source env/bin/activate  # Windows: env\Scripts\activate
 pip install -r requirements.txt
 python manage.py makemigrations
-ppython manage.py runserver
 python manage.py migrate
+ppython manage.py runserver
 
